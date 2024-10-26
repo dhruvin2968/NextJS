@@ -15,7 +15,8 @@ export default function VerifyEmailPage() {
         try {
             await axios.post('/api/users/verifyemail', {token})
             setVerified(true);
-        } catch (error:any) {
+        }// eslint-disable-next-line @typescript-eslint/no-explicit-any
+        catch (error:any) {
             setError(true);
             console.log(error.reponse.data);
             
