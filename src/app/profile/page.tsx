@@ -12,7 +12,8 @@ export default function Profilepage(){
             const rep=await axios.get('/api/users/logout');
             console.log("LogOut successful",rep);
             router.push('/login');
-        } catch (error:any) {
+        }// eslint-disable-next-line @typescript-eslint/no-explicit-any 
+        catch (error:any) {
             console.log(error.message)
             
         }

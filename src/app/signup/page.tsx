@@ -19,7 +19,8 @@ const onSignup=async()=>{
         const response=await axios.post("/api/users/signup",user);
         console.log("Signup successful",response);  //console log in frontend /console
         router.push("/login")
-    } catch (error:any) {
+    }// eslint-disable-next-line @typescript-eslint/no-explicit-any
+     catch (error:any) {
         console.log(error.message);
         //toast
     }finally{
